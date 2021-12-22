@@ -9,7 +9,7 @@ import os
 # Verificare che funzioni day_access
 
 # Set the directory in which data will be stored and the day limit of your account
-local_dir = 'C:\\Users\\bonal\\OneDrive\\Desktop\\Codice\\Finance'
+local_dir = os.getcwd()
 day_limit = 500
 
 os.chdir(local_dir)

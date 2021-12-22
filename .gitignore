@@ -7,6 +7,7 @@ Data
 Data_alpha.txt
 data_to_collect.txt
 followed.txt
+update.bat
 
 # C extensions
 *.so

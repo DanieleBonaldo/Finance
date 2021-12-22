@@ -5,18 +5,18 @@ import os
 import pandas as pd
 import json
 
-
-foll = 'AAPL'
+'''
+stock = 'AAPL'
 data = 'EARNINGS'
 key = ["fiscalDateEnding", "reportedEPS"]
-#"fiscalDateEnding", "reportedEPS"
-cwd=os.getcwd()
+'''
 
-def librarian(foll, datatype, keys=None, period=2):
+cwd=os.getcwd()
+def librarian(stock, datatype, keys=None, period=2):
     # period = 2 quarterly, period = 1 annual
 
-    os.chdir(os.path.join(cwd,foll))
-    filename = foll + '_' + datatype + '.csv'
+    os.chdir(os.path.join(cwd,"Data//" + stock))
+    filename = stock + '_' + datatype + '.csv'
     if datatype=='TIME_SERIES_DAILY':
         read = get_key_from_csv(filename)
     else:
@@ -40,9 +40,9 @@ def get_key_from_json(filename, period):
 
 
 
-a = librarian(foll,data)
 '''
+a = librarian(stock,data)
+print(a)
 plt.plot(a[0],a[1])
 plt.show()
 '''
-print(a)
